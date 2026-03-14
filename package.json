@@ -2,7 +2,7 @@
   "name": "tasks-redux",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://zxcmimis.github.io/tasks-redux/",
+  "homepage": "https://zxcmimis.github.io/todo-task-async-redux/",
   "dependencies": {
     "@reduxjs/toolkit": "^2.11.2",
     "@testing-library/dom": "^10.4.1",
