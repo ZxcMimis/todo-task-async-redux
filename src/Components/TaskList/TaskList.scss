@@ -1,0 +1,17 @@
+.task-list {
+  border-radius: 12px;
+  min-height: 200px;
+
+  .empty-msg {
+    text-align: center;
+    color: #666;
+    margin-top: 50px;
+    font-style: italic;
+    font-size: 18px;
+    
+    &::before {
+      content: "★ ";
+      color: #7b2cbf;
+    }
+  }
+}
