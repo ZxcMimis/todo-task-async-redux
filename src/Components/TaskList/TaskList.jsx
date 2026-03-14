@@ -1,7 +1,8 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { StatusFilters } from "../../redux/constant";
 import TaskItem from "../TaskItem/TaskItem";
+import { fetchTasks } from "../../redux/operations"; 
 import "./TaskList.scss";
 
 const getVisibleTasks = (tasks, filter) => {
@@ -18,7 +19,13 @@ const getVisibleTasks = (tasks, filter) => {
 };
 
 const TaskList = () => {
+  const dispatch = useDispatch(); 
   const { tasks, filter } = useSelector((state) => state.tasksData);
+  
+  useEffect(() => {
+    dispatch(fetchTasks());
+  }, [dispatch]);
+
   const visibleTasks = getVisibleTasks(tasks, filter);
 
   return (

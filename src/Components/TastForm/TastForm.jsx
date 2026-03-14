@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addTask } from "../../redux/taskSlice";
+import { addTask } from "../../redux/operations";
 import "./TastForm.scss";
 
 const TastForm = () => {

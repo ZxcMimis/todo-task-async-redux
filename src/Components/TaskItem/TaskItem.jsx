@@ -1,13 +1,13 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { deleteTask, toggleComplete } from "../../redux/taskSlice";
+import { deleteTask, toggleComplete } from "../../redux/operations";
 import "./TaskItem.scss";
 
 const TaskItem = ({ task }) => {
   const dispatch = useDispatch();
 
   const handleDelete = () => dispatch(deleteTask(task.id));
-  const handleToggle = () => dispatch(toggleComplete(task.id));
+  const handleToggle = () => dispatch(toggleComplete(task));
 
   return (
     <div className={`task-item ${task.completed ? "completed" : ""}`}>
